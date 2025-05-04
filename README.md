@@ -5,7 +5,7 @@
 <div>
     Yan Zhang</a>&emsp;
     Yuxin Feng</a>&emsp;
-    fan Zhou</a>&emsp;
+    Fan Zhou</a>&emsp;
     Zhuo Su</a>
 </div>
 

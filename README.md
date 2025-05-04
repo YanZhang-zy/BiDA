@@ -94,15 +94,14 @@ Step 1. Download the pre-trained Res2Net model weight from [[BaiduPan](https://p
 Step 2. Make sure the file structure is consistent with the following:
 ```
 pre_model/
-└── imagenet_model
-    └── res2net101_v1b_26w_4s-0812c246.pth
+└── res2net101_v1b_26w_4s-0812c246.pth
 clip_model/
 ├── haze_prompt.pth
 ├── RN101.pt
 └── ViT-B-32.pt
 ```
 
-Step 3. Run the following script to train CoA from scratch:
+Step 3. Run the following script to train BiDA from scratch:
 ```
 python NBL.py
 python BL.py
@@ -115,7 +114,7 @@ Step 2. Make sure the file structure is consistent with the following:
 ```
 weight/
 ├── Pre.pth
-├── BL.pth
+└── BL.pth
 ```
 
 Step 3. Run the following script to test BiDA:

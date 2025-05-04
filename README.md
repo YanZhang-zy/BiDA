@@ -31,15 +31,15 @@
 Step 1. Clone this repo:
 
 ```
-git clone https://github.com/YanZhang-zy/CoA.git
-cd CoA/
+git clone https://github.com/YanZhang-zy/BiDA.git
+cd BiDA/
 ```
 
 Step 2. Create a new conda environment and install dependencies:
 
 ```
-conda create -n CoA python=3.10
-conda activate CoA
+conda create -n BiDA python=3.10
+conda activate BiDA
 conda install pytorch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
@@ -88,7 +88,7 @@ In our experiment, we randomly select 4000 haze images from URHI training datase
 
 
 ## :hotsprings: Model Training
-Step 1. Download the pre-trained Res2Net model weight from [[BaiduPan](https://pan.baidu.com/s/16WZ8FcMiY4JrkwxFy2yTLA?pwd=0214)].
+Step 1. Download the pre-trained Res2Net model weight from [[BaiduPan](https://pan.baidu.com/s/1Xm9lRFTupWl-SWrGa6X9Gw?pwd=0519)].
 
 Step 2. Make sure the file structure is consistent with the following:
 ```
@@ -103,47 +103,22 @@ clip_model/
 
 Step 3. Run the following script to train CoA from scratch:
 ```
-python Teacher.py
-python KD.py
+python NBL.py
+python BL.py
 ```
 
 ## :taxi: Model Testing
-Step 1. Download the pre-trained model weights from [[BaiduPan](https://pan.baidu.com/s/16WZ8FcMiY4JrkwxFy2yTLA?pwd=0214)].
+Step 1. Download the pre-trained model weights from [[BaiduPan](https://pan.baidu.com/s/1Xm9lRFTupWl-SWrGa6X9Gw?pwd=0519)].
 
 Step 2. Make sure the file structure is consistent with the following:
 ```
-model/
-├── Teacher_model
-│   └── Teacher.pth
-├── Student_model
-│   └── Student.pth
-├── EMA_model
-│   ├── EMA.pth
-│   └── EMA_r.pth
+weight/
+├── Pre.pth
+├── BL.pth
 ```
 
-Step 3. Run the following script to test CoA:
+Step 3. Run the following script to test BiDA:
 ```
 python Eval.py
 ```
 
-## :clipboard: Acknowledgments
-We would like to extend our gratitude to the following implementations for their contributions to the development of CoA:
-
-- [CLIP-LIT](https://github.com/ZhexinLiang/CLIP-LIT.git) for providing the methodology for training pre-trained prompt pairs.
-- [DEA-Net](https://github.com/cecret3350/DEA-Net.git) for providing the re-parameterization technique.
-
-## :triangular_flag_on_post: Citation
-If you find our paper and repo are helpful for your research, please consider citing:
-
-```bibtex
-@inproceedings{ma2025coa,
- author={Long Ma, Yuxin Feng, Yan Zhang, Jinyuan Liu, Weimin Wang, Guangyong Chen, Chengpei Xu, Zhuo Su},
- booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
- title={CoA: Towards Real Image Dehazing via Compression-and-Adaptation},
- year={2025}
-}
-```
-
-## :mailbox_with_mail: Contacts 
-If you have any questions or suggestions about this repo, please feel free to contact me (zhangy2779@mail2.sysu.edu.cn).

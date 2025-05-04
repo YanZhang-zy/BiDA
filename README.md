@@ -47,6 +47,7 @@ pip install -r requirements.txt
 ##  :book: Data Preparation
 
 Step 1. Download the haze dataset from websites or papers.
+
 Step 2. Make sure the file structure is consistent with the following:
 
 ```
@@ -92,7 +93,7 @@ Step 1. Download the pre-trained Res2Net model weight from [[BaiduPan](https://p
 
 Step 2. Make sure the file structure is consistent with the following:
 ```
-model/
+pre_model/
 └── imagenet_model
     └── res2net101_v1b_26w_4s-0812c246.pth
 clip_model/

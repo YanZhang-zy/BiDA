@@ -294,7 +294,7 @@ if __name__ == "__main__":
     test_dir = '../dataset/THaze/val'
     test_set = TestDataset(os.path.join(test_dir, 'hazy'), os.path.join(test_dir, 'clear'), format='.jpg')
 
-    train_dir_2 = '../dataset/RTTS'
+    train_dir_2 = '../dataset/F500'
     train_set_2 = CLIP_loader(train_dir_2, True, 256)
 
     loader_train_1 = DataLoader(dataset=train_set_1, batch_size=24, shuffle=True, num_workers=4)
